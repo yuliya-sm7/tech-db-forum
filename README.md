@@ -12,6 +12,14 @@
 
  * репозиторий, содержащий все необходимое для разворачивания сервиса в Docker-контейнере.
 
+## Как запустить
+```
+docker build -t smirnova -f Dockerfile.golang .
+docker run -p 127.0.0.1:5000:5000 -ti smirnova
+// Tests:
+./tech-db-forum func -u http://localhost:5000/api -r report.html
+```
+
 ## Документация к API
 Документация к API предоставлена в виде спецификации [OpenAPI](https://ru.wikipedia.org/wiki/OpenAPI_%28%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F%29): swagger.yml
 
